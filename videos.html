@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+</head>
+<body>
+
+ 			<div>
+			                <!-- Id refered in "V-0001.Js" -->
+                            <div id="V-0001"></div>
+                        </div>
+</body>
+</html>
+
+<script type="text/javascript" src="jwplayer.js"></script>
+<script type="text/javascript" src="V-0001.js"></script> <!-- Java script required for JW Player-->
+<script type="text/javascript">jwplayer.key = "wtzCIDQJspCKE+s8uLUfID/dD5Q0GbW8zVFeb+3KbfY=";</script> <!-- JW PLayer Key---->
+<script type="text/javascript" src="jwplayer.html5.js"></script>
+<script src="public.ajaxcart.js"></script>
+<script src="public.common.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript" language="javascript" >
+
+        $(document).ready(function () {
+
+            play();
+            $('#imgRewind').click(function () {
+                var pos = jwplayer().getPosition();
+                jwplayer("myElement").seek(pos - 15);
+            });
+
+            $('#imgForward').click(function () {
+                var pos = jwplayer("myElement").getPosition();
+                jwplayer("myElement").seek(pos + 15);
+            });
+            $('#imgRewind').click(function () {
+                var pos = jwplayer().getPosition();
+                jwplayer("myElementOne").seek(pos - 15);
+            });
+
+            $('#imgForward').click(function () {
+                var pos = jwplayer("myElementOne").getPosition();
+                jwplayer("myElementOne").seek(pos + 15);
+            });
+        });
+
+        $(function () {
+            $("#tabs").tabs({
+                effect: 'scale'
+
+            });
+        });
+</script>
