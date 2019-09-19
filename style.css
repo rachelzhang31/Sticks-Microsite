@@ -89,3 +89,8 @@ tr:nth-child(even) {
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
+#fixed-div {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
